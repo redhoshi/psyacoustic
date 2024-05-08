@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/psyacoustic/static/css/main.f855e6bc.css",
+    "main.js": "/psyacoustic/static/js/main.652ebb9c.js",
+    "static/js/453.e903b789.chunk.js": "/psyacoustic/static/js/453.e903b789.chunk.js",
+    "static/media/logo.svg": "/psyacoustic/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/psyacoustic/index.html",
+    "main.f855e6bc.css.map": "/psyacoustic/static/css/main.f855e6bc.css.map",
+    "main.652ebb9c.js.map": "/psyacoustic/static/js/main.652ebb9c.js.map",
+    "453.e903b789.chunk.js.map": "/psyacoustic/static/js/453.e903b789.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.652ebb9c.js"
+  ]
+}
