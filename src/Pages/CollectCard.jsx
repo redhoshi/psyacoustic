@@ -1,3 +1,7 @@
+////////////////
+/// Card List
+////////////////
+
 import React from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import {
@@ -10,7 +14,7 @@ import {
   Stack,
   Image,
   Button,
-  ButtonGroup
+  ButtonGroup,
 } from '@chakra-ui/react';
 
 // それぞれのカードに異なる画像URLと背景色を指定します
@@ -22,13 +26,13 @@ const CARD_DATA = [
     brandtext: 'a',
   },
   {
-    imageUrl: 'https://images.unsplash.com/photo-1530096491893-1badda20a6b3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
     bgColor: 'rgba(255, 255, 255, 0.7)',
     title: 'Fundamental Frequency Discrimination',
     brandtext: 'b',
   },
   {
-    imageUrl: 'https://images.unsplash.com/photo-1559156211-56c9fb18d0e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
     bgColor: 'rgba(255, 255, 255, 0.6)',
     title: 'Fundamental Frequency Discrimination',
     brandtext: 'c',
@@ -40,13 +44,13 @@ const CARD_DATA = [
     brandtext: 'd',
   },
   {
-    imageUrl: 'https://images.unsplash.com/photo-1563439180804-aa02cd22a6b7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
     bgColor: 'rgba(255, 255, 255, 0.4)',
     title: 'Fundamental Frequency Discrimination',
     brandtext: 'e',
   },
   {
-    imageUrl: 'https://images.unsplash.com/photo-1581092207044-6ea9c20959f3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
     bgColor: 'rgba(255, 255, 255, 0.3)',
     title: 'Fundamental Frequency Discrimination',
     brandtext: 'f',
@@ -55,7 +59,7 @@ const CARD_DATA = [
 
 
 
-export default function ProductSimple() {
+export default function CollectCard() {
   const navigate = useNavigate();
 
   const onClickPage1 = () => {
@@ -114,7 +118,7 @@ export default function ProductSimple() {
                     {title}
                   </Heading>
                   <Stack direction={'row'} align={'center'}>
-                    <Button colorScheme='pink' size='md' onClick={onClickPage1}>Start</Button>
+                    <Button px={12} colorScheme='gray' size='md' onClick={onClickPage1}>Start</Button>
                     {/* 
                   <Text fontWeight={800} fontSize={'xl'}>
                   $57
@@ -126,7 +130,9 @@ export default function ProductSimple() {
                   </Stack>
                 </Stack>
               </Box>
+
             </Center>
+            
           ))}
         </Flex>
   );

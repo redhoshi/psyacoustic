@@ -1,0 +1,9 @@
+
+:root {
+    --contentWidth: 1200px;
+}
+
+.eyecatch-wrapper {
+    max-width: calc(var(--contentWidth) + 10px);
+    margin: 0 auto;
+}

@@ -1,20 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+////////////////
+/// Home
+////////////////
+
+
+import logo from '../logo.svg';
+import '../App.css';
 import { ChakraProvider } from '@chakra-ui/react';
-import Simple from './Pages/Nav';
+import Simple from '../Pages/Nav';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Experiment from './Pages/Embed_Page';
+import CollectCard from './CollectCard';
+import EyeCatch from './EyeCatch';
+import Contact from './Contact';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <ChakraProvider>
         <Simple/>
-        <Experiment/>
+        <EyeCatch/>
+        <CollectCard/>
+        <Contact/>
       </ChakraProvider>
     </div>
   );
 }
 
-export default App;
+export default Home;

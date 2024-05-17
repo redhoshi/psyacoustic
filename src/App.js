@@ -6,21 +6,25 @@ import Simple from './Pages/Nav';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import EmbeddedPage from './Pages/Embed_Page';
-import CollectCard from './Pages/CollectCard';
+import Home from "./Pages/Home";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path={`/`} element={<Home />} />
         <Route path={`/EmbeddedPage`} element={<EmbeddedPage />} />
       </Routes>
+      {/* 
       <div className="App">
           <ChakraProvider>
             <Simple />
             <CollectCard />
-            {/* <EmbeddedPage/>*/}
+            
           </ChakraProvider>
         </div>
+        {/* <EmbeddedPage/>*/}
     </BrowserRouter>
   );
 }
