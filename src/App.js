@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path={`/`} element={<Home />} />
+      <Route path={`/psyacoustic`} element={<Home />} />
         <Route path={`/EmbeddedPage`} element={<EmbeddedPage />} />
       </Routes>
       {/* 
