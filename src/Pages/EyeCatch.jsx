@@ -36,7 +36,7 @@ function EyeCatch() {
           borderRadius: '5px',
         }}>
           <h2>Psyacoustic Lab</h2>
-          <p>This is some overlay text on the image.</p>
+          <p>Here, you can test a variety of classical psychoacoustic tasks</p>
         </div>
       </div>
       
