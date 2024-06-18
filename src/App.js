@@ -14,7 +14,6 @@ import ILD from './Pages/ILD';
 import TMTF from './Pages/TMTF';
 import Home from "./Pages/Home";
 import Adjust_Comfortable from "./Pages/Adjust_Comfortable";
-import Login from "./Pages/Login";
 import CollectCard from "./Pages/CollectCard";
 
 
@@ -31,7 +30,6 @@ function App() {
         <Route path={`/ILD`} element={<ILD />} />
         <Route path={`/TMTF`} element={<TMTF />} />
         <Route path={`/Adjust_Comfortable`} element={<Adjust_Comfortable />} />
-        <Route path={`/Login`} element={<Login />} />
         <Route path={`/CollectCard`} element={<CollectCard />} />
         <Route path={`/PreCollectCard`} element={<CollectCard />} />
       </Routes>

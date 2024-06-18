@@ -18,7 +18,7 @@ function F0shift() {
   const iframeRef = useRef(null);
 
   const sendMessageToIframe = () => { // emailデータ react - reactのデータ受け渡し
-    const message = data.email;
+    const message = data.userID;
     console.log(message, iframeRef);
     if (iframeRef.current) {
       iframeRef.current.contentWindow.postMessage(message, '*');
@@ -84,30 +84,13 @@ function F0shift() {
       {/* 外部のウェブページを埋め込む*/}
       <iframe
         ref={iframeRef}
-        src="https://sym.cs-ninhyou.com/exp/trash.html" // 埋め込みたいウェブページのURLを指定
+        src="https://sym.cs-ninhyou.com/exp/f0shift.html" 
+       // src="https://sym.cs-ninhyou.com/exp/trash.html" // 埋め込みたいウェブページのURLを指定
         title="F0 Shift"
         style={{ width: '100%', height: '100%', border: 'none' }}
         onLoad={handleLoad}
         //id="myIframe"
       />
-      {/* app.js *
-      {window.addEventListener("load", function () {
-        const iframe = document.getElementById('myIframe');
-        const id = "12345"; // 送信したいID
-
-        console.log(id)
-        iframe.onload = function () {
-          iframe.contentWindow.postMessage({ id: id }, '*');
-        };
-      })
-      }
-      {
-        window.addEventListener("message", function (event) {
-          if (event.origin === window.location.origin && event.data === 'focusInput') {
-            document.getElementById('myIframe').contentWindow.document.getElementById('inputField').focus();
-          }
-        })
-      }*/}
     </div>
   );
 }

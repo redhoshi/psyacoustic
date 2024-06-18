@@ -57,41 +57,6 @@ export default function Contact() {
 
         <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
           <Heading size='md'>Contact</Heading>
-          {/**
-         * <Heading>Contact</Heading>
-        <VStack pl={0} spacing={3} alignItems="flex-start">
-            <Button
-              size="md"
-              height="48px"
-              width="200px"
-              variant="ghost"
-              color="#DCE2FF"
-              _hover={{ border: '2px solid #1C6FEB' }}
-              leftIcon={<MdPhone color="#1970F1" size="20px" />}>
-              +91-988888888
-            </Button>
-            <Button
-              size="md"
-              height="48px"
-              width="200px"
-              variant="ghost"
-              color="#DCE2FF"
-              _hover={{ border: '2px solid #1C6FEB' }}
-              leftIcon={<MdEmail color="#1970F1" size="20px" />}>
-              hello@abc.com
-            </Button>
-            <Button
-              size="md"
-              height="48px"
-              width="200px"
-              variant="ghost"
-              color="#DCE2FF"
-              _hover={{ border: '2px solid #1C6FEB' }}
-              leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
-              Karnavati, India
-            </Button>
-          </VStack>
-           */}
           <HStack
             mt={{ lg: 10, md: 10 }}
             spacing={5}

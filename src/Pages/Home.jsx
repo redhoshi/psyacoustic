@@ -19,7 +19,7 @@ import PreCollectCard from './PreCollectCard'
 function Home() {
 
   const location = useLocation();
-  const {email, login, adjust} = location.state || {};
+  const {useID, login, adjust} = location.state || {};
 
   return (
     <div className="App">
@@ -27,7 +27,7 @@ function Home() {
         <Simple/>
         <EyeCatch/>
         {/* Logged in したら */}
-        { login==true && adjust==false ? (<PreCollectCard email/>) : login==true && adjust==true ? (<CollectCard email/>):<DemoOrExp/>}
+        { login==true && adjust==false ? (<PreCollectCard useID/>) : login==true && adjust==true ? (<CollectCard useID/>):<DemoOrExp/>}
         <Contact/>
       </ChakraProvider>
     </div>

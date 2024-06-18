@@ -1,5 +1,5 @@
 ////////////////
-/// Card List
+/// 音量調整画面
 ////////////////
 
 import React from 'react';
@@ -27,7 +27,7 @@ const CARD_DATA = [
     bgColor: 'rgba(255, 255, 255, 0.4)',
     title: 'Adjust Comfortable Level',
     brandtext: 'e',
-    link:'/F0shift',
+    link:'/Adjust_Comfortable', // adjustに変更する 
   },
 ];
 

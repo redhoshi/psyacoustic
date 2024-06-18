@@ -1,5 +1,7 @@
 ////////////////
-/// Card List
+/// DemoかExpか
+/// Demo - 音量調整課題のみ
+/// Exp - 音量調整(PreCollectCard)+聴覚心理実験(CollectCard)
 ////////////////
 
 import React from 'react';
@@ -36,14 +38,14 @@ const CARD_DATA = [
     bgColor: 'rgba(255, 255, 255, 0.8)',
     title: 'Demo play',
     brandtext: 'a',
-    link: '/f0shift',
+    link: '/psyacoustic',
   },
   {
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/gap%404x.png?alt=media&token=46838642-e6b2-48e9-981f-bfb3bd592648',
     bgColor: 'rgba(255, 255, 255, 0.7)',
     title: 'Login',
     brandtext: 'b',
-    link: '/Login',
+    link: '/psyacoustic',
   },
 ];
 
@@ -53,10 +55,21 @@ const CARD_DATA = [
 export default function CollectCard() {
   const navigate = useNavigate();
 
-
+  const generateRandomId = () => {
+    return Math.random().toString(36).substr(2, 9) + '-' + Date.now().toString(36);
+  };
 
   const onClickPage1 = (link) => {
-    navigate(link);
+
+    var userID = generateRandomId();
+    //console.log(userID, userstarte);
+
+    const userData = {
+      userID : userID,
+      login : true,
+      adjust : false,
+    };
+    navigate(link, {state:userData});
     //navigate("/EmbeddedPage");
   };
 
@@ -83,28 +96,7 @@ export default function CollectCard() {
               <Text>View a summary of all your customers over the last month.</Text>
             </CardBody>
             <CardFooter>
-              <GoogleLogin
-                onSuccess={credentialResponse => {
-                  const decoded = jwtDecode(credentialResponse?.credential);
-                  console.log(decoded);
-                  console.log(decoded.email);
-
-                  const userData = {
-                    email: decoded.email,
-                    login: true,
-                    adjust:false,
-                  };
-                  navigate('/psyacoustic', { state: userData });
-                  // link to collect card
-                  /*history.push({
-                    pathname: '/receiver',
-                    state: { message: decoded.email }
-                  });*/
-                }}
-                onError={() => {
-                  console.log('Login Failed');
-                }}
-              />
+            <Button onClick={()=>{onClickPage1(CARD_DATA[0].link)}}>Exp start</Button>
             </CardFooter>
           </Card>
         </SimpleGrid>
