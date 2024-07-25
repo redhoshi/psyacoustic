@@ -20,59 +20,6 @@ import {
 
 
 
-// それぞれのカードに異なる画像URLと背景色を指定します
-const CARD_DATA = [
-  {
-    //imageUrl: 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/f0shift%404x.png?alt=media&token=5b152dce-9d1c-4a9e-9aea-9ebe34a2614c',
-    bgColor: 'rgba(255, 255, 255, 0.8)',
-    title: 'Frequency Discrimination Level',
-    brandtext: 'a',
-    link:'/f0shift',
-  },
-  {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/gap%404x.png?alt=media&token=46838642-e6b2-48e9-981f-bfb3bd592648',
-    bgColor: 'rgba(255, 255, 255, 0.7)',
-    title: 'Gap Detection',
-    brandtext: 'b',
-    link:'/Gap',
-  },
-  {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/itd%20v2%404x.png?alt=media&token=c14ec7ce-8619-4e61-9078-27cbc4a351cc',
-    bgColor: 'rgba(255, 255, 255, 0.6)',
-    title: 'Interaural Time Difference',
-    brandtext: 'c',
-    link:'/ITD',
-  },
-  {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/ild%20v2.png?alt=media&token=71d2e9cc-8a58-4ca9-a7c2-213837f1f390',
-    bgColor: 'rgba(255, 255, 255, 0.5)',
-    title: 'Interaural Level Difference',
-    brandtext: 'd',
-    link:'/ILD',
-  },
-  {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
-    bgColor: 'rgba(255, 255, 255, 0.4)',
-    title: 'Adjust Comfortable Level',
-    brandtext: 'e',
-    link:'/Adjust_Comfortable',
-  },
-  {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/huggins%404x.png?alt=media&token=993d8215-95a7-48b6-b6b3-2fc140f412fd',
-    bgColor: 'rgba(255, 255, 255, 0.3)',
-    title: 'Huggins Pitch',
-    brandtext: 'f',
-    link:'/Huggins_Pitch',
-  },
-  {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/TMTF%404x.png?alt=media&token=1828095d-2406-4e62-9a8e-61479e80b8a2',
-    bgColor: 'rgba(255, 255, 255, 0.3)',
-    title: 'Temporal Modulation Transfer Function',
-    brandtext: 'g',
-    link:'/TMTF',
-  },
-];
 
 
 
@@ -83,7 +30,69 @@ export default function CollectCard() {
   const location = useLocation();
   const data = location.state;
 
-  console.log(data,'data')
+  console.log(data,'data');
+
+  // それぞれのカードに異なる画像URLと背景色を指定します
+  const CARD_DATA = [
+    {
+      //imageUrl: 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/f0shift%404x.png?alt=media&token=5b152dce-9d1c-4a9e-9aea-9ebe34a2614c',
+      bgColor: 'rgba(255, 255, 255, 0.8)',
+      title: 'Frequency Discrimination Level',
+      brandtext: 'a',
+      link:'/f0shift',
+      active: data.FDL,
+    },
+    {
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/gap%404x.png?alt=media&token=46838642-e6b2-48e9-981f-bfb3bd592648',
+      bgColor: 'rgba(255, 255, 255, 0.7)',
+      title: 'Gap Detection',
+      brandtext: 'b',
+      link:'/Gap',
+      active: data.GAP,
+    },
+    {
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/itd%20v2%404x.png?alt=media&token=c14ec7ce-8619-4e61-9078-27cbc4a351cc',
+      bgColor: 'rgba(255, 255, 255, 0.6)',
+      title: 'Interaural Time Difference',
+      brandtext: 'c',
+      link:'/ITD',
+      active: data.ITD,
+    },
+    {
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/ild%20v2.png?alt=media&token=71d2e9cc-8a58-4ca9-a7c2-213837f1f390',
+      bgColor: 'rgba(255, 255, 255, 0.5)',
+      title: 'Interaural Level Difference',
+      brandtext: 'd',
+      link:'/ILD',
+      active: data.ILD,
+    },
+    {
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
+      bgColor: 'rgba(255, 255, 255, 0.4)',
+      title: 'Adjust Comfortable Level',
+      brandtext: 'e',
+      link:'/Adjust_Comfortable',
+      active: data.ADJUST,
+    },
+    {
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/huggins%404x.png?alt=media&token=993d8215-95a7-48b6-b6b3-2fc140f412fd',
+      bgColor: 'rgba(255, 255, 255, 0.3)',
+      title: 'Huggins Pitch',
+      brandtext: 'f',
+      link:'/Huggins_Pitch',
+      active: data.HP,
+    },
+    {
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/TMTF%404x.png?alt=media&token=1828095d-2406-4e62-9a8e-61479e80b8a2',
+      bgColor: 'rgba(255, 255, 255, 0.3)',
+      title: 'Temporal Modulation Transfer Function',
+      brandtext: 'g',
+      link:'/TMTF',
+      active: data.TMTF,
+    },
+  ];
+
 
   const onClickPage1 = (link) => {
     navigate(link,{state:data});
@@ -92,7 +101,7 @@ export default function CollectCard() {
 
   return (
         <Flex justify="center" align="center" wrap="wrap">
-          {CARD_DATA.map(({ imageUrl, bgColor, title, brandtext, link }, index) => (
+          {CARD_DATA.map(({ imageUrl, bgColor, title, brandtext, link, active }, index) => (
             <Center key={index} py={12} px={6}>
               <Box
                 role={'group'}
@@ -103,7 +112,11 @@ export default function CollectCard() {
                 boxShadow={'2xl'}
                 rounded={'lg'}
                 pos={'relative'}
-                zIndex={1}>
+                zIndex={1}
+                style={
+                  active === false ? { opacity: 0.2, pointerEvents: 'none' } : {} // 条件に基づいてスタイルを適用
+                }
+                >
                 <Box
                   rounded={'lg'}
                   mt={-12}

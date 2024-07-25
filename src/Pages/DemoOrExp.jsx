@@ -68,6 +68,13 @@ export default function CollectCard() {
       userID : userID,
       login : true,
       adjust : false,
+      FDL : true, // for deactivate each button
+      GAP : true,
+      ITD : true,
+      ILD : false,
+      ADJUST : true,
+      HP : true,
+      TMTF : true,
     };
     navigate(link, {state:userData});
     //navigate("/EmbeddedPage");

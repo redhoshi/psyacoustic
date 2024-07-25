@@ -48,10 +48,21 @@ function F0shift() {
 
 
       const handleMessage = (event) => {
-        if (event.data === 'experiment_finished') {  // finish adjust experiment
+        if (event.data.length == 7 ) {  // finish adjust experiment
+          //event.data === 'experiment_finished
           // Close the iframe and navigate to home page
-          data.adjust = true; // connect adjust and huggins pitch
+          data.FDL = event.data[0];
+          data.GAP = event.data[1];
+          data.ITD = event.data[2];
+          data.ILD = event.data[3];
+          data.ADJUST = event.data[4];
+          data.HP = event.data[5];
+          data.TMTF = event.data[6];
+          data.adjust = true; // connect adjust and huggins pitch*/
+          console.log(event.data)
           navigate('/psyacoustic',{state:data});
+        }else{
+          console.log('no message',event.data,event.data.length);
         }
       };
   
@@ -84,7 +95,8 @@ function F0shift() {
       {/* 外部のウェブページを埋め込む*/}
       <iframe
         ref={iframeRef}
-        src="https://sym.cs-ninhyou.com/exp/f0shift.html" 
+        //src="https://sym.cs-ninhyou.com/exp/f0shift.html" 
+        src="https://sym.cs-ninhyou.com/exp/f0shift_async.html" 
        // src="https://sym.cs-ninhyou.com/exp/trash.html" // 埋め込みたいウェブページのURLを指定
         title="F0 Shift"
         style={{ width: '100%', height: '100%', border: 'none' }}
