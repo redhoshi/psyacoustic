@@ -70,9 +70,9 @@ export default function CollectCard() {
     {
       imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
       bgColor: 'rgba(255, 255, 255, 0.4)',
-      title: 'Adjust Comfortable Level',
+      title: 'Pleasantness Rating',
       brandtext: 'e',
-      link:'/Adjust_Comfortable',
+      link:'/Pleasantness_Rating',
       active: data.ADJUST,
     },
     {

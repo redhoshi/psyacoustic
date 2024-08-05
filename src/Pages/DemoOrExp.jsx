@@ -71,7 +71,7 @@ export default function CollectCard() {
       FDL : true, // for deactivate each button
       GAP : true,
       ITD : true,
-      ILD : false,
+      ILD : true,
       ADJUST : true,
       HP : true,
       TMTF : true,

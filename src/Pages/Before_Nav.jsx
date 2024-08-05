@@ -28,13 +28,8 @@ import {
 } from '@chakra-ui/icons';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 
-
-
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
-  const location = useLocation(); //add
-  const data = location.state;
 
   return (
     <Box>
@@ -71,11 +66,12 @@ export default function WithSubnavigation() {
           >
             Logo
           </Text>
+
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-        UserID : <b>{data.userID}</b>
+
         <Stack
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
@@ -97,10 +93,6 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
-  const location = useLocation(); //add
-  const data = location.state;
-
-  console.log('jjjj',data);
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -142,13 +134,11 @@ const DesktopNav = () => {
           </Popover>
         </Box>
       ))}
-     {/* {data.userID} ? <p  color={useColorModeValue('gray.600', 'gray.200')}  fontSize={'sm'} fontWeight={500}>UserID :<b> {data.userID} </b></p>:null*/}
     </Stack>
   );
 };
 
 const DesktopSubNav = ({ label, href, subLabel }) => {
-
   return (
     <Link
       href={href}
@@ -180,7 +170,6 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
         >
           <Icon color={'gray.400'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
-      
       </Stack>
     </Link>
   );
@@ -197,7 +186,6 @@ const MobileNav = () => {
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
-    
   );
 };
 
@@ -251,7 +239,6 @@ const MobileNavItem = ({ label, children, href }) => {
         </Stack>
       </Collapse>
     </Stack>
-    
   );
 };
 

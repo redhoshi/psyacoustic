@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Spinner } from '@chakra-ui/react'
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function TMTF() {
+function Pleasantness_Rating() {
   const location = useLocation();
   const data = location.state;
 
@@ -91,8 +91,8 @@ function TMTF() {
       {/* 外部のウェブページを埋め込む */}
       <iframe
         ref={iframeRef}
-        src="https://sym.cs-ninhyou.com/exp/tmtf_async.html" // 埋め込みたいウェブページのURLを指定
-        title="Temporal Modulation Transfer Function"
+        src="https://sym.cs-ninhyou.com/exp/pleasantness_ratings_piano_async.html" // 埋め込みたいウェブページのURLを指定
+        title="Interaural Level Difference"
         style={{ width: '100%', height: '100%', border: 'none' }}
         onLoad={handleLoad}
       />
@@ -100,4 +100,4 @@ function TMTF() {
   );
 }
 
-export default TMTF;
+export default Pleasantness_Rating;

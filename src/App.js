@@ -15,6 +15,7 @@ import TMTF from './Pages/TMTF';
 import Home from "./Pages/Home";
 import Adjust_Comfortable from "./Pages/Adjust_Comfortable";
 import CollectCard from "./Pages/CollectCard";
+import Pleasantness_Rating from "./Pages/Pleasantness_Rating";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path={`/Huggins_Pitch`} element={<Huggins_Pitch />} />
         <Route path={`/ITD`} element={<ITD />} />
         <Route path={`/ILD`} element={<ILD />} />
+        <Route path={`/Pleasantness_Rating`} element={<Pleasantness_Rating />} />
         <Route path={`/TMTF`} element={<TMTF />} />
         <Route path={`/Adjust_Comfortable`} element={<Adjust_Comfortable />} />
         <Route path={`/CollectCard`} element={<CollectCard />} />

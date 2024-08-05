@@ -1,12 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Spinner } from '@chakra-ui/react'
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Gap() {
+
+  const location = useLocation();
+  const data = location.state;
+
   const [loading, setLoading] = useState(true);
 
   const handleLoad = () => {
     setLoading(false);
   };
+
+  const iframeRef = useRef(null);
+
+  const sendMessageToIframe = () => { // emailデータ react - reactのデータ受け渡し
+    const message = data.userID;
+    console.log(message, iframeRef);
+    if (iframeRef.current) {
+      iframeRef.current.contentWindow.postMessage(message, '*');
+      console.log('post message')
+    }
+  };
+
+  useEffect(() => {
+      // iframe が完全に読み込まれてからメッセージを送信する
+      const iframe = iframeRef.current;
+      if (iframe) {
+        iframe.onload = sendMessageToIframe;
+      }
+  
+      // クリーンアップ関数
+      return () => {
+        if (iframe) {
+          iframe.onload = null;
+        }
+      };
+    }, []);
+
+    
+    // iframeが終了したhomeに戻る
+    const navigate = useNavigate();
+    useEffect(() => {
+
+
+      const handleMessage = (event) => {
+        if (event.data.length == 7 ) {  // finish adjust experiment
+          //event.data === 'experiment_finished
+          // Close the iframe and navigate to home page
+          data.FDL = event.data[0];
+          data.GAP = event.data[1];
+          data.ITD = event.data[2];
+          data.ILD = event.data[3];
+          data.ADJUST = event.data[4];
+          data.HP = event.data[5];
+          data.TMTF = event.data[6];
+          data.adjust = true; // connect adjust and huggins pitch*/
+          console.log(event.data)
+          navigate('/psyacoustic',{state:data});
+        }else{
+          console.log('no message',event.data,event.data.length);
+        }
+      };
+  
+      window.addEventListener('message', handleMessage);
+  
+      return () => {
+        window.removeEventListener('message', handleMessage);
+      };
+    }, [navigate]);
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden', border: '0.5px solid black' }}>
@@ -28,8 +91,9 @@ function Gap() {
 
       {/* 外部のウェブページを埋め込む */}
       <iframe
-        src="https://sym.cs-ninhyou.com/exp/gap.html" // 埋め込みたいウェブページのURLを指定
-        title="Frequency Discrimination Level"
+         ref={iframeRef}
+        src="https://sym.cs-ninhyou.com/exp/gap_async.html" // 埋め込みたいウェブページのURLを指定
+        title="Gap Detection"
         style={{ width: '100%', height: '100%', border: 'none' }}
         onLoad={handleLoad}
       />
