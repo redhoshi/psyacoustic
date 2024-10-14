@@ -45,6 +45,7 @@ function Adjust_Comfortable() {
        if (event.data === 'experiment_finished') {  // finish adjust experiment
          // Close the iframe and navigate to home page
          data.adjust = true; // connect adjust and huggins pitch
+         //data.endexp = true;
          navigate('/psyacoustic',{state:data});
        }
      };

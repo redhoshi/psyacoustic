@@ -47,6 +47,13 @@ const CARD_DATA = [
     brandtext: 'b',
     link: '/psyacoustic',
   },
+  {
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/gap%404x.png?alt=media&token=46838642-e6b2-48e9-981f-bfb3bd592648',
+    bgColor: 'rgba(255, 255, 255, 0.7)',
+    title: 'Login',
+    brandtext: 'b',
+    link: '/psyacoustic',
+  },
 ];
 
 
@@ -67,6 +74,7 @@ export default function CollectCard() {
     const userData = {
       userID : userID,
       login : true,
+      endexp : false,
       adjust : false,
       FDL : true, // for deactivate each button
       GAP : true,
@@ -83,29 +91,42 @@ export default function CollectCard() {
   return (
     <Flex justify="center" align="center" wrap="wrap">
       <Center py={12} px={6}>
-        <SimpleGrid spacing={10} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+        <SimpleGrid spacing={10} templateColumns='repeat(2, 1fr)'>
+          <Card>
+              <CardHeader>
+                <Heading size='md'> Exp Start </Heading>
+              </CardHeader>
+              <CardBody>
+                <Text>実験を始める方はこちらから始めてください</Text>
+              </CardBody>
+              <CardFooter>
+                <Button onClick={()=>{onClickPage1(CARD_DATA[0].link)}}>Exp start</Button>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardHeader>
+                <Heading size='md'> Demo Play </Heading>
+              </CardHeader>
+              <CardBody>
+                <Text>実験のデモを試したい方はこちらから始めてください</Text>
+              </CardBody>
+              <CardFooter>
+              <Button onClick={()=>{onClickPage1(CARD_DATA[0].link)}}>Demo Play</Button>
+              </CardFooter>
+            </Card>
+            {/*
           <Card>
             <CardHeader>
-              <Heading size='md'> Demo Play </Heading>
+              <Heading size='md'> Exp Restart </Heading>
             </CardHeader>
             <CardBody>
-              <Text>View a summary of all your customers over the last month.</Text>
+              <Text>-*実験を途中退室した方用です*-実験へのログインはこちら</Text>
             </CardBody>
             <CardFooter>
-              <Button>View here</Button>
+              <Button>Login here</Button>
             </CardFooter>
           </Card>
-          <Card>
-            <CardHeader>
-              <Heading size='md'> Exp Login </Heading>
-            </CardHeader>
-            <CardBody>
-              <Text>View a summary of all your customers over the last month.</Text>
-            </CardBody>
-            <CardFooter>
-            <Button onClick={()=>{onClickPage1(CARD_DATA[0].link)}}>Exp start</Button>
-            </CardFooter>
-          </Card>
+           */}
         </SimpleGrid>
       </Center>
     </Flex>

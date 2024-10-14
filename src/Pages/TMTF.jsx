@@ -57,6 +57,11 @@ function TMTF() {
           data.TMTF = event.data[6];
           data.adjust = true; // connect adjust and huggins pitch*/
           console.log(event.data)
+          if(data.FDL == true || data.GAP == true || data.ITD == true || data.ILD == true || data.ADJUST == true || data.HP == true || data.TMTF == true){
+            data.endexp = true;
+            //navigate('/psyacoustic',{state:data});
+            console.log('endexp',data);
+          }
           navigate('/psyacoustic',{state:data});
         }else{
           console.log('no message',event.data,event.data.length);
