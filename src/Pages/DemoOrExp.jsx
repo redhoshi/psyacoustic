@@ -45,7 +45,7 @@ const CARD_DATA = [
     bgColor: 'rgba(255, 255, 255, 0.7)',
     title: 'Login',
     brandtext: 'b',
-    link: '/psyacoustic',
+    link: '/login',
   },
   {
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/gap%404x.png?alt=media&token=46838642-e6b2-48e9-981f-bfb3bd592648',
@@ -75,14 +75,26 @@ export default function CollectCard() {
       userID : userID,
       login : true,
       endexp : false,
-      adjust : false,
-      FDL : true, // for deactivate each button
-      GAP : true,
-      ITD : true,
-      ILD : true,
-      ADJUST : true,
-      HP : true,
-      TMTF : true,
+      question : false,
+
+      wired_VOL: true,
+      wired_FDL : true, // for deactivate each button
+      wired_GAP : true,
+      wired_DYAD : true,
+      wired_HP : true,
+      
+      wireless_VOL: true,
+      wireless_FDL : true, // for deactivate each button
+      wireless_GAP : true,
+      wireless_DYAD : true,
+      wireless_HP : true,
+
+      wireless_VOL: true,
+      speaker__FDL : true, // for deactivate each button
+      speaker_GAP : true,
+      speaker_DYAD : true,
+      speaker_HP : true,
+
     };
     navigate(link, {state:userData});
     //navigate("/EmbeddedPage");
@@ -111,7 +123,7 @@ export default function CollectCard() {
                 <Text>実験のデモを試したい方はこちらから始めてください</Text>
               </CardBody>
               <CardFooter>
-              <Button onClick={()=>{onClickPage1(CARD_DATA[0].link)}}>Demo Play</Button>
+              <Button onClick={()=>{onClickPage1(CARD_DATA[1].link)}}>Demo Play</Button>
               </CardFooter>
             </Card>
             {/*

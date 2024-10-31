@@ -46,21 +46,18 @@ function Gap() {
 
 
       const handleMessage = (event) => {
-        if (event.data.length == 7 ) {  // finish adjust experiment
+        if (event.data.length == 4 ) {  // finish adjust experiment
           //event.data === 'experiment_finished
           // Close the iframe and navigate to home page
           data.FDL = event.data[0];
           data.GAP = event.data[1];
-          data.ITD = event.data[2];
-          data.ILD = event.data[3];
-          data.ADJUST = event.data[4];
-          data.HP = event.data[5];
-          data.TMTF = event.data[6];
+          data.ADJUST = event.data[2];
+          data.HP = event.data[3];
+
           data.adjust = true; // connect adjust and huggins pitch*/
           console.log(event.data)
-          if(data.FDL == true || data.GAP == true || data.ITD == true || data.ILD == true || data.ADJUST == true || data.HP == true || data.TMTF == true){
+          if(data.FDL == true && data.GAP == true && data.ADJUST == true && data.HP == true){
             data.endexp = true;
-            //navigate('/psyacoustic',{state:data});
             console.log('endexp',data);
           }
           navigate('/psyacoustic',{state:data});

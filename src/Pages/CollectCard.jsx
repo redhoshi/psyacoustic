@@ -20,10 +20,6 @@ import {
 
 
 
-
-
-
-
 export default function CollectCard() {
   const navigate = useNavigate();
   
@@ -51,6 +47,7 @@ export default function CollectCard() {
       link:'/Gap',
       active: data.GAP,
     },
+    /*
     {
       imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/itd%20v2%404x.png?alt=media&token=c14ec7ce-8619-4e61-9078-27cbc4a351cc',
       bgColor: 'rgba(255, 255, 255, 0.6)',
@@ -66,7 +63,7 @@ export default function CollectCard() {
       brandtext: 'd',
       link:'/ILD',
       active: data.ILD,
-    },
+    },*/
     {
       imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
       bgColor: 'rgba(255, 255, 255, 0.4)',
@@ -83,6 +80,7 @@ export default function CollectCard() {
       link:'/Huggins_Pitch',
       active: data.HP,
     },
+    /*
     {
       imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/TMTF%404x.png?alt=media&token=1828095d-2406-4e62-9a8e-61479e80b8a2',
       bgColor: 'rgba(255, 255, 255, 0.3)',
@@ -90,7 +88,7 @@ export default function CollectCard() {
       brandtext: 'g',
       link:'/TMTF',
       active: data.TMTF,
-    },
+    },*/
   ];
 
 
