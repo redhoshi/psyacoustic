@@ -23,18 +23,19 @@ import {
 // それぞれのカードに異なる画像URLと背景色を指定します
 const CARD_DATA = [
   {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_loudness%404x.png?alt=media&token=8b7fdfc9-21ef-43dc-bddb-fb0fb97d69e2',
     bgColor: 'rgba(255, 255, 255, 0.4)',
-    title: 'Questionnaire',
-    //brandtext: 'e',
-    link:'/Question', // adjustに変更する 
+    title: 'Adjust Speaker Comfortable Level',
+    brandtext: 'e',
+    //link:'../Speaker/Speaker_Adjust_Comfortable', // adjustに変更する 
+    link:'../Speaker/Speaker_Adjust_Comfortable', // adjustに変更する 
   },
 ];
 
 
 
 
-export default function PreCollectCard() {
+export default function Speaker_PreCollectCard() {
   const navigate = useNavigate();
   
   const location = useLocation();

@@ -41,9 +41,9 @@ export default function CollectCard() {
   };
 
   // ユーザーIDをBase64エンコード
-  const encodedUserID = base64Encode(data.useID);
+  const encodedUserID = base64Encode(data.userID);
 
-  console.log('Encoded UserID:', encodedUserID, data.useID);
+  console.log('Encoded UserID:', encodedUserID, data.userID);
 
 
   return (

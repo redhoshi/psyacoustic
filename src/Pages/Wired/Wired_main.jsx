@@ -25,16 +25,16 @@ const CARD_DATA = [
   {
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
     bgColor: 'rgba(255, 255, 255, 0.4)',
-    title: 'Questionnaire',
-    //brandtext: 'e',
-    link:'/Question', // adjustに変更する 
+    title: 'Adjust Comfortable Level',
+    brandtext: 'e',
+    link:'/Adjust_Comfortable', // adjustに変更する 
   },
 ];
 
 
 
 
-export default function PreCollectCard() {
+export default function Wired_main() {
   const navigate = useNavigate();
   
   const location = useLocation();
@@ -100,15 +100,6 @@ export default function PreCollectCard() {
                   </Heading>
                   <Stack direction={'row'} align={'center'}>
                     <Button px={12} colorScheme='gray' size='md' onClick={()=>{onClickPage1(link)}}>Start</Button>
-                    {/* 2回 onclickしたら　or サーバーにファイルが書き込めたらhomeに戻る */}
-                    {/* 
-                  <Text fontWeight={800} fontSize={'xl'}>
-                  $57
-                </Text>
-                <Text textDecoration={'line-through'} color={'gray.600'}>
-                  $199
-                </Text>
-                */}
                   </Stack>
                 </Stack>
               </Box>

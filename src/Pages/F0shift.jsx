@@ -45,22 +45,23 @@ function F0shift() {
     // iframeが終了したhomeに戻る
     const navigate = useNavigate();
     useEffect(() => {
-
-
       const handleMessage = (event) => {
         if (event.data.length == 4 ) {  // finish adjust experiment
           //event.data === 'experiment_finished
           // Close the iframe and navigate to home page
-          data.FDL = event.data[0];
-          data.GAP = event.data[1];
-          data.ADJUST = event.data[2];
-          data.HP = event.data[3];
+          data.wired_FDL = event.data[0];
+          data.wired_GAP = event.data[1];
+          data.wired_DYAD = event.data[2];
+          data.wired_HP = event.data[3];
           data.adjust = true; // connect adjust and huggins pitch*/
           console.log(event.data)
-          if(data.FDL == true && data.GAP == true && data.ADJUST == true && data.HP == true){
+         
+          if(data.wired_FDL == false && data.wired_GAP == false && data.wired_DYAD == false && data.wired_HP == false){
             data.endexp = true;
           }else{
-          navigate('/psyacoustic',{state:data});
+            console.log("元に戻るはず")
+            navigate('/psyacoustic',{state:data});
+          
           }
 
 

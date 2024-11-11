@@ -57,8 +57,10 @@ function Wired_Gap() {
           data.adjust = true; // connect adjust and huggins pitch*/
           console.log(event.data)
           if(data.wired_FDL == false && data.wired_GAP == false && data.wired_DYAD == false && data.wired_HP == false){
-            data.endexp = true;
-            console.log('endexp',data);
+            data.wired_exp = false;
+          } 
+          if (data.wired_exp == false && data.wireless_exp == false && data.speaker_exp == false){ // 実験終了
+            data.end_exp = true;
           }
           navigate('/psyacoustic',{state:data});
         }else{

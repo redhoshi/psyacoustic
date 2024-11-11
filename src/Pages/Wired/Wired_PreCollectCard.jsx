@@ -23,18 +23,19 @@ import {
 // それぞれのカードに異なる画像URLと背景色を指定します
 const CARD_DATA = [
   {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wired_loudness%404x.png?alt=media&token=2635badb-9b1e-42d6-9980-f507d4814e12',
     bgColor: 'rgba(255, 255, 255, 0.4)',
-    title: 'Questionnaire',
-    //brandtext: 'e',
-    link:'/Question', // adjustに変更する 
+    title: 'Adjust Wired Comfortable Level',
+    brandtext: '1',
+    link:'../Wired/Wired_Adjust_Comfortable', // adjustに変更する 
+    //active: data.wired_EXP //全て
   },
 ];
 
 
 
 
-export default function PreCollectCard() {
+export default function Wired_PreCollectCard() {
   const navigate = useNavigate();
   
   const location = useLocation();

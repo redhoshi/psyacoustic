@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Spinner } from '@chakra-ui/react'
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function Huggins_Pitch() {
+function Wired_Huggins() {
+
   const location = useLocation();
   const data = location.state;
 
@@ -48,17 +49,20 @@ function Huggins_Pitch() {
         if (event.data.length == 4 ) {  // finish adjust experiment
           //event.data === 'experiment_finished
           // Close the iframe and navigate to home page
-          data.FDL = event.data[0];
-          data.GAP = event.data[1];
-          data.ADJUST = event.data[2];
-          data.HP = event.data[3];
+          data.wired_FDL = event.data[0];
+          data.wired_GAP = event.data[1];
+          data.wired_DYAD = event.data[2];
+          data.wired_HP = event.data[3];
 
           data.adjust = true; // connect adjust and huggins pitch*/
           console.log(event.data)
-          if(data.FDL == true && data.GAP == true && data.ADJUST == true && data.HP == true){
-            data.endexp = true;
-            console.log('endexp',data);
+          if(data.wired_FDL == false && data.wired_GAP == false && data.wired_DYAD == false && data.wired_HP == false){
+            data.wired_exp = false;
+          } 
+          if (data.wired_exp == false && data.wireless_exp == false && data.speaker_exp == false){ // 実験終了
+            data.end_exp = true;
           }
+          navigate('/psyacoustic',{state:data});
         }else{
           console.log('no message',event.data,event.data.length);
         }
@@ -91,8 +95,8 @@ function Huggins_Pitch() {
 
       {/* 外部のウェブページを埋め込む */}
       <iframe
-        ref={iframeRef}
-        src="https://sym.cs-ninhyou.com/exp/huggins_pitch_main_async.html" // 埋め込みたいウェブページのURLを指定
+         ref={iframeRef}
+        src="https://sym.cs-ninhyou.com/exp/wired_huggins_async.html" // 埋め込みたいウェブページのURLを指定
         title="Huggins Pitch"
         style={{ width: '100%', height: '100%', border: 'none' }}
         onLoad={handleLoad}
@@ -101,4 +105,4 @@ function Huggins_Pitch() {
   );
 }
 
-export default Huggins_Pitch;
+export default Wired_Huggins;

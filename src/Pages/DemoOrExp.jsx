@@ -68,32 +68,36 @@ export default function CollectCard() {
 
   const onClickPage1 = (link) => {
 
-    var userID = generateRandomId();
+    var userID = generateRandomId();  // ユーザーIDの生成
     //console.log(userID, userstarte);
 
     const userData = {
       userID : userID,
       login : true,
-      endexp : false,
-      question : false,
+      end_exp : false,
+      question : true,
+      random: 0,
 
       wired_VOL: true,
       wired_FDL : true, // for deactivate each button
       wired_GAP : true,
       wired_DYAD : true,
       wired_HP : true,
+      wired_exp : true, // wired exp end
       
       wireless_VOL: true,
       wireless_FDL : true, // for deactivate each button
       wireless_GAP : true,
       wireless_DYAD : true,
       wireless_HP : true,
+      wireless_exp : true, // wired exp end
 
-      wireless_VOL: true,
-      speaker__FDL : true, // for deactivate each button
+      speaker_VOL: true,
+      speaker_FDL : true, // for deactivate each button
       speaker_GAP : true,
       speaker_DYAD : true,
       speaker_HP : true,
+      speaker_exp : true, // wired exp end
 
     };
     navigate(link, {state:userData});
@@ -109,7 +113,7 @@ export default function CollectCard() {
                 <Heading size='md'> Exp Start </Heading>
               </CardHeader>
               <CardBody>
-                <Text>実験を始める方はこちらから始めてください</Text>
+                <Text>初めて実験に参加される方はこちらから始めてください</Text>
               </CardBody>
               <CardFooter>
                 <Button onClick={()=>{onClickPage1(CARD_DATA[0].link)}}>Exp start</Button>
@@ -117,13 +121,13 @@ export default function CollectCard() {
             </Card>
             <Card>
               <CardHeader>
-                <Heading size='md'> Demo Play </Heading>
+                <Heading size='md'> Login </Heading>
               </CardHeader>
               <CardBody>
-                <Text>実験のデモを試したい方はこちらから始めてください</Text>
+                <Text>ログインをしたい方はこちらから始めてください</Text>
               </CardBody>
               <CardFooter>
-              <Button onClick={()=>{onClickPage1(CARD_DATA[1].link)}}>Demo Play</Button>
+              <Button onClick={()=>{onClickPage1(CARD_DATA[1].link)}}>Login</Button>
               </CardFooter>
             </Card>
             {/*
@@ -132,7 +136,7 @@ export default function CollectCard() {
               <Heading size='md'> Exp Restart </Heading>
             </CardHeader>
             <CardBody>
-              <Text>-*実験を途中退室した方用です*-実験へのログインはこちら</Text>
+              <Text>-*実験を0途中退室した方用です*-実験へのログインはこちら</Text>
             </CardBody>
             <CardFooter>
               <Button>Login here</Button>

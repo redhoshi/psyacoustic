@@ -23,18 +23,18 @@ import {
 // それぞれのカードに異なる画像URLと背景色を指定します
 const CARD_DATA = [
   {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_loudness%404x.png?alt=media&token=f4fb2a5f-29f6-43c6-b7b9-57c62fa793b1',
     bgColor: 'rgba(255, 255, 255, 0.4)',
-    title: 'Questionnaire',
-    //brandtext: 'e',
-    link:'/Question', // adjustに変更する 
+    title: 'Adjust Wireless Comfortable Level',
+    brandtext: 'e',
+    link:'../Wireless/Wireless_Adjust_Comfortable', // adjustに変更する 
   },
 ];
 
 
 
 
-export default function PreCollectCard() {
+export default function Wireless_PreCollectCard() {
   const navigate = useNavigate();
   
   const location = useLocation();
