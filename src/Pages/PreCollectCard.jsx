@@ -23,9 +23,9 @@ import {
 // それぞれのカードに異なる画像URLと背景色を指定します
 const CARD_DATA = [
   {
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/comfortable%404x.png?alt=media&token=eb8de1a1-9eb7-4ff8-924a-943a637350d6',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/questionnaire%404x.png?alt=media&token=e5650905-1d21-40b9-954f-fdc876fa0bf6',
     bgColor: 'rgba(255, 255, 255, 0.4)',
-    title: 'Questionnaire',
+    title: 'アンケート',
     //brandtext: 'e',
     link:'/Question', // adjustに変更する 
   },

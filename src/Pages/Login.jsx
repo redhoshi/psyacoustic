@@ -100,6 +100,7 @@ function Login() {
 
 
         }else{
+          navigate('/psyacoustic',{state:data});
           console.log('no message',event.data,event.data.length);
         }
       };

@@ -27,6 +27,8 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import image from '../assets/logo.png'; // 画像ファイルをインポート
+
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -59,16 +61,17 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <img src={image} alt="logo" style={{ width: '35px', marginRight: '10px' }} />
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
           >
-            Logo
+            Psychoacostic Lab
           </Text>
-
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
+            
           </Flex>
         </Flex>
 
