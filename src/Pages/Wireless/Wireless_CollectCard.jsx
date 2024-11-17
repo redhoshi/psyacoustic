@@ -31,7 +31,7 @@ export default function Wireless_CollectCard() {
   // それぞれのカードに異なる画像URLと背景色を指定します
   const CARD_DATA = [
     {
-      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_fdl%404x.png?alt=media&token=ff62db43-dda7-4a27-ade3-5d6911e2ba76',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_wall.png?alt=media&token=5add9d09-9d90-4aee-b7e1-84dda3014cae',
       bgColor: 'rgba(255, 255, 255, 0.8)',
       title: 'Frequency Discrimination Level',
       brandtext: 'a',
@@ -39,7 +39,7 @@ export default function Wireless_CollectCard() {
       active: data.wireless_FDL,
     },
     {
-      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_gap%404x.png?alt=media&token=ce55fca0-0957-4d65-ae99-941e7885e07a',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_wall.png?alt=media&token=5add9d09-9d90-4aee-b7e1-84dda3014cae',
       bgColor: 'rgba(255, 255, 255, 0.7)',
       title: 'Gap Detection',
       brandtext: 'b',
@@ -47,7 +47,7 @@ export default function Wireless_CollectCard() {
       active: data.wireless_GAP,
     },
     {
-      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_pleasantness%404x.png?alt=media&token=2523b69b-129f-4cfa-8063-fb54c88bb5fd',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_wall.png?alt=media&token=5add9d09-9d90-4aee-b7e1-84dda3014cae',
       bgColor: 'rgba(255, 255, 255, 0.4)',
       title: 'Pleasantness Rating',
       brandtext: 'e',
@@ -55,7 +55,7 @@ export default function Wireless_CollectCard() {
       active: data.wireless_DYAD,
     },
     {
-      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_hp%404x.png?alt=media&token=adec00ae-bc2a-4905-b453-12444f9f2759',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/wireless_wall.png?alt=media&token=5add9d09-9d90-4aee-b7e1-84dda3014cae',
       bgColor: 'rgba(255, 255, 255, 0.3)',
       title: 'Huggins Pitch',
       brandtext: 'f',

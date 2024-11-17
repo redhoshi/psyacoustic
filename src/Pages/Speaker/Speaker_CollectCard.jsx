@@ -32,7 +32,7 @@ export default function Speaker_CollectCard() {
   const CARD_DATA = [
     {
       //imageUrl: 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
-      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_fdl%404x.png?alt=media&token=75dbd6b0-949b-413e-b11a-a93c58fc3ac6',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_wall.png?alt=media&token=072c89a3-f00c-4812-a34d-7960fcdab6e0',
       bgColor: 'rgba(255, 255, 255, 0.8)',
       title: 'Frequency Discrimination Level',
       brandtext: 'a',
@@ -40,7 +40,7 @@ export default function Speaker_CollectCard() {
       active: data.speaker_FDL,
     },
     {
-      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_gap%404x.png?alt=media&token=02500e3b-1347-4dfd-8882-a1600fc75673',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_wall.png?alt=media&token=072c89a3-f00c-4812-a34d-7960fcdab6e0',
       bgColor: 'rgba(255, 255, 255, 0.7)',
       title: 'Gap Detection',
       brandtext: 'b',
@@ -48,7 +48,7 @@ export default function Speaker_CollectCard() {
       active: data.speaker_GAP,
     },
     {
-      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_pleasantness%404x.png?alt=media&token=6174f99e-df68-4eda-820c-48ceb156892f',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_wall.png?alt=media&token=072c89a3-f00c-4812-a34d-7960fcdab6e0',
       bgColor: 'rgba(255, 255, 255, 0.4)',
       title: 'Pleasantness Rating',
       brandtext: 'e',
@@ -56,7 +56,7 @@ export default function Speaker_CollectCard() {
       active: data.speaker_DYAD,
     },
     {
-      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_hp%404x.png?alt=media&token=f258c4d4-86d5-4c82-b09a-a79e92aa469f',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/myport-698a9.appspot.com/o/speaker_wall.png?alt=media&token=072c89a3-f00c-4812-a34d-7960fcdab6e0',
       bgColor: 'rgba(255, 255, 255, 0.3)',
       title: 'Huggins Pitch',
       brandtext: 'f',
