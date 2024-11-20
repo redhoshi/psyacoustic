@@ -33,6 +33,8 @@ import Wireless_Huggins from "./Pages/Wireless/Wireless_Huggins";
 import Wireless_F0shift from "./Pages/Wireless/Wireless_F0shift";
 import Wireless_Gap from "./Pages/Wireless/Wireless_Gap";
 import Wireless_Pleasantness from "./Pages/Wireless/Wireless_Pleasantness";
+import PreCollectCardLab from "./Pages/PreCollectCardLab";
+import QuestionLab from "./Pages/QuestionLab";
 
 function App() {
   return (
@@ -52,6 +54,8 @@ function App() {
         <Route path={`/PreCollectCard`} element={<CollectCard />} />
         <Route path={`/login`} element={<Login />} />
         <Route path={`/Question`} element={<Question />} />
+        <Route path={'/PreCollectCardLab'} element={<PreCollectCardLab />} />
+        <Route path={'/QuestionLab'} element={<QuestionLab />} /> 
         
         <Route path={`/Wired/Wired_Adjust_Comfortable`} element={<Wired_Adjust_Comfortable />} />
         <Route path={`/Wired/Wired_F0shift`} element={<Wired_F0shift />} />

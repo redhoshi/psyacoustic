@@ -24,12 +24,13 @@ import Wireless_CollectCard from './Wireless/Wireless_CollectCard';
 import Speaker_main from './Speaker/Speaker_main';
 import Speaker_CollectCard from './Speaker/Speaker_CollectCard';
 import ThreeCard from './ThreeCard';
+import PreCollectCardLab from './PreCollectCardLab';
 
 
 function Home() {
 
   const location = useLocation();
-  const {useID, login, end_exp, question, random,
+  const {useID, login, end_exp, question, random, lab,
     wired_VOL, wired_FDL, wired_GAP, wired_DYAD, wired_HP, wired_exp,
     wireless_VOL, wireless_FDL, wireless_GAP, wireless_DYAD, wireless_HP, wireless_exp,
     speaker_VOL, speaker_FDL, speaker_GAP, speaker_DYAD, speaker_HP, speaker_exp,
@@ -53,8 +54,11 @@ function Home() {
         <EyeCatch useID/>
         {/* Logged in したら */}
         { 
-        // アンケート終了
-        login==true && question==true && end_exp==false ? (<PreCollectCard useID/>)  
+        // アンケート終了 online
+        login==true && question==true && end_exp==false && lab==true? (<PreCollectCardLab useID/>) 
+        // アンケート終了 lab
+        :login==true && question==true && end_exp==false && lab==false? (<PreCollectCard useID/>)
+        
         // 有線と無線とスピーカーの選択
         :login==true && question==false && end_exp==false ? (<ThreeCard useID random wired_VOL wired_FDL wired_GAP wired_DYAD wired_exp wireless_VOL wireless_FDL wireless_GAP wireless_DYAD wireless_HP wireless exp speaker_VOL speaker_FDL speaker_GAP speaker_DYAD speaker_HP speaker_exp/>)
         // 終了判定

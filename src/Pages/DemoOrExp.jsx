@@ -66,17 +66,57 @@ export default function CollectCard() {
     return Math.random().toString(36).substr(2, 9) + '-' + Date.now().toString(36);
   };
 
-  const onClickPage1 = (link) => {
+  const onClickPage1 = (link) => { // online
 
     var userID = generateRandomId();  // ユーザーIDの生成
     //console.log(userID, userstarte);
 
-    const userData = {
+    var userData = { // const before
       userID : userID,
       login : true,
       end_exp : false,
       question : true,
       random: 0,
+      lab: false, // conduct exp on lab or online
+
+      wired_VOL: true,
+      wired_FDL : true, // for deactivate each button
+      wired_GAP : true,
+      wired_DYAD : true,
+      wired_HP : true,
+      wired_exp : true, // wired exp end
+      
+      wireless_VOL: true,
+      wireless_FDL : true, // for deactivate each button
+      wireless_GAP : true,
+      wireless_DYAD : true,
+      wireless_HP : true,
+      wireless_exp : true, // wired exp end
+
+      speaker_VOL: true,
+      speaker_FDL : true, // for deactivate each button
+      speaker_GAP : true,
+      speaker_DYAD : true,
+      speaker_HP : true,
+      speaker_exp : true, // wired exp end
+
+    };
+    navigate(link, {state:userData});
+    //navigate("/EmbeddedPage");
+  };
+
+  const onClickPage2 = (link) => { // lab
+
+    var userID = generateRandomId();  // ユーザーIDの生成
+    //console.log(userID, userstarte);
+
+    var userData = { // const before
+      userID : userID,
+      login : true,
+      end_exp : false,
+      question : true,
+      random: 0,
+      lab: true, // conduct exp on lab or online
 
       wired_VOL: true,
       wired_FDL : true, // for deactivate each button
@@ -107,7 +147,7 @@ export default function CollectCard() {
   return (
     <Flex justify="center" align="center" wrap="wrap">
       <Center py={12} px={6}>
-        <SimpleGrid spacing={10} templateColumns='repeat(2, 1fr)'>
+        <SimpleGrid spacing={10} templateColumns='repeat(3, 1fr)'> {/* repeat(2, 1fr) */}
           <Card>
               <CardHeader>
                 <Heading size='md'> Exp Start </Heading>
@@ -130,19 +170,21 @@ export default function CollectCard() {
               <Button onClick={()=>{onClickPage1(CARD_DATA[1].link)}}>Login</Button>
               </CardFooter>
             </Card>
-            {/*
+            
           <Card>
             <CardHeader>
-              <Heading size='md'> Exp Restart </Heading>
+              <Heading size='md'> Campus Only </Heading>
             </CardHeader>
             <CardBody>
-              <Text>-*実験を0途中退室した方用です*-実験へのログインはこちら</Text>
+              <Text>学内専用です。クリックしないでください。</Text>
             </CardBody>
             <CardFooter>
-              <Button>Login here</Button>
+            <Button onClick={()=>{
+              console.log("学内専用ページ")
+              onClickPage2(CARD_DATA[2].link
+              )}}>Campus Only</Button>
             </CardFooter>
           </Card>
-           */}
         </SimpleGrid>
       </Center>
     </Flex>
