@@ -84,8 +84,8 @@ export default function CollectCard() {
         return (
           <>
             {data.speaker_exp === true && (data.speaker_VOL === false ? <Speaker_CollectCard /> : <Speaker_PreCollectCard />)}
-            {data.speaker_exp === false && data.wireless_exp === true && (data.wireless_exp === false ? <Wireless_CollectCard /> : <Wireless_PreCollectCard />)}
-            {data.speaker_exp === false && data.wireless_exp === false && data.wired_exp === true && (data.wired_exp === false ? <Wired_CollectCard /> : <Wired_PreCollectCard />)}
+            {data.speaker_exp === false && data.wireless_exp === true && (data.wireless_VOL === false ? <Wireless_CollectCard /> : <Wireless_PreCollectCard />)}
+            {data.speaker_exp === false && data.wireless_exp === false && data.wired_exp === true && (data.wired_VOL === false ? <Wired_CollectCard /> : <Wired_PreCollectCard />)}
           </>
         );
       default:
